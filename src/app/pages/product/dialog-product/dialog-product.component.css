@@ -1,0 +1,11 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.car-button {
+    width: 250px;
+    height: 50px;
+    background-color:#385296;
+    color: white;
+    text-align: center;
+}

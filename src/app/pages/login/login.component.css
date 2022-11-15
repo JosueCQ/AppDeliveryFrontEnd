@@ -1,0 +1,13 @@
+.active {
+    color: black;
+}
+  
+.routerPaths {
+      margin: 10px 10px 10px 20px;
+      size: 50px;
+}
+  
+a{
+    color: black;
+    text-decoration: none;
+}

@@ -1,0 +1,34 @@
+<!--<div>
+  <span>El pedido se agrego al carrito</span>
+  <span class="example-spacer"></span>
+  <button align="end" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+</div>-->
+
+<h2 mat-dialog-title>El pedido se agrego al carrito</h2>
+
+<mat-dialog-content class="mat-typography">
+
+  <div fxLayout="column" class="container">
+    <div fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+        
+      <div fxFlex.gt-sm="40%" fxFlex.lt-md="50%" fxLayoutAlign="center center" class="grid-item">
+          product.image
+      </div>
+
+      <div fxLayout="column" fxFlex.gt-sm="60%" fxFlex.lt-md="50%" fxLayoutAlign="center center" class="grid-item">
+
+          <h2>product.title</h2>
+          <h3>marca: product.branch</h3>
+          <h3>Cantidad: product.quantity</h3>
+          <h2>product.price</h2>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-raised-button class="car-button" [routerLink]="'/shoppinCar'">IR A MI CARRITO</button>
+  
+  <button mat-button mat-dialog-close [routerLink]="'/scList'">Seguir comprando</button>
+</mat-dialog-actions>

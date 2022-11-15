@@ -1,0 +1,64 @@
+.active {
+  color: black;
+}
+
+.routerPaths {
+    margin: 10px 10px 10px 20px;
+    size: 50px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    padding: 5px;
+}
+  
+.grid-item {
+    background-color: lightsalmon;
+    border-radius: 5px;
+    padding: 10px;
+    height: 450px;
+    border: 1px solid black
+}
+
+.grid-item1 {
+    background-color: blue;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+ 
+.cuadro3 {
+    text-align:center;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px;
+}
+
+.search-part {
+    display: flex;
+    flex-direction: row;
+}
+
+.mat-form-field {
+    width: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.add-button {
+    width: 250px;
+    height: 50px;
+    background-color:#385296;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,56 @@
+<div class="routerPaths"routerLinkActive="active">
+    <a [routerLink]="'/main'" >inicio</a>
+    <a> > </a>
+    <a [routerLink]="'/product'"    >product</a>
+</div>
+
+<mat-divider></mat-divider>
+
+<div fxLayout="column" class="container">
+
+    <div fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+        
+        <div fxLayout="column" fxLayoutGap="10px" fxFlex.gt-sm="60%" 
+            fxFlex.lt-md="50%" fxLayoutAlign="center center" class="grid-item">
+
+
+
+
+
+
+            <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxLayoutAlign="center center" 
+            fxFlexFill class="grid-item1">B</div>
+            <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxLayoutAlign="center center" 
+            fxFlexFill class="grid-item1">C</div>
+        
+
+
+
+
+        </div>
+
+        <div fxFlex.gt-sm="40%" fxFlex.lt-md="50%"  
+            class="grid-item">
+
+            <div class="cuadro3" align="start">
+
+                <h2>product.title</h2>
+                <h3>marca: product.branch</h3>
+                <h3>Cantidad: product.quantity</h3>
+                <h2>product.price</h2>
+
+                <mat-divider inset></mat-divider>
+
+                <div class="search-part">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Cantidad</mat-label>
+                        <input matInput value="1">
+                    </mat-form-field>
+
+                    <button mat-raised-button class="add-button" (click)="openDialog()">AGREGAR AL CARRITO</button>
+  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
