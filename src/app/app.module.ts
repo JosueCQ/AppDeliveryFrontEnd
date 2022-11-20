@@ -26,6 +26,7 @@ import { HeaderComponent } from './pages/header/header.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { MatDividerModule } from "@angular/material/divider";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Components
 import { MainViewComponent } from './pages/main-view/main-view.component';
@@ -33,6 +34,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { ProductComponent } from './pages/product/product.component';
 import { DialogProductComponent } from './pages/product/dialog-product/dialog-product.component';
 import { ScListComponent } from './pages/shoppingCar/sc-list/sc-list.component';
+import { DialogDirectionComponent } from './pages/shoppingCar/dialog-direction/dialog-direction.component';
+import { DialogPaymentComponent } from './pages/shoppingCar/dialog-payment/dialog-payment.component';
+import { PaymentDoneComponent } from './pages/shoppingCar/payment-done/payment-done.component';
 
 
 @NgModule({
@@ -45,6 +49,9 @@ import { ScListComponent } from './pages/shoppingCar/sc-list/sc-list.component';
     ProductComponent,
     DialogProductComponent,
     ScListComponent,
+    DialogDirectionComponent,
+    DialogPaymentComponent,
+    PaymentDoneComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +63,7 @@ import { ScListComponent } from './pages/shoppingCar/sc-list/sc-list.component';
     MatCardModule,
     MatSidenavModule,
     //MatCheckboxModule,
-    //ReactiveFormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatSelectModule,
     MatMenuModule,
@@ -68,7 +75,8 @@ import { ScListComponent } from './pages/shoppingCar/sc-list/sc-list.component';
     MatDialogModule,
     MatInputModule,
     //MatTabsModule
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

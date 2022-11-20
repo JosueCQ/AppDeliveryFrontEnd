@@ -8,49 +8,55 @@
 
 <div fxLayout="column" class="container">
 
-    <div fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+    <div fxLayout.gt-sm="row" fxLayout.lt-md="column">
         
-        <div fxLayout="column" fxLayoutGap="10px" fxFlex.gt-sm="60%" 
-            fxFlex.lt-md="50%" fxLayoutAlign="center center" class="grid-item">
+        <div *ngIf="product" fxLayout="column" fxFlex.gt-sm="60%" 
+            fxFlex.lt-md="50%" >
 
+            <div fxFlex.gt-sm="60%" fxFlex.lt-md="50%"  
+                fxFlexFill>
+                <mat-card class="card-3">        
+                    <h1>{{ product.name }}</h1>
+                    <mat-card-content>
+                        <h3>Marca: {{ product.branch }}</h3> 
+                        <h3>Calificacion: {{ product.stars }} </h3>
+                        <h2>Monto: S/.{{ product.price }}.00 </h2>
+                    </mat-card-content>
+                    
+                </mat-card>
+            </div>
 
+            <div fxFlex.gt-sm="40%" fxFlex.lt-md="50%"  
+                fxFlexFill>
 
-
-
-
-            <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxLayoutAlign="center center" 
-            fxFlexFill class="grid-item1">B</div>
-            <div fxFlex.gt-sm="50%" fxFlex.lt-md="50%" fxLayoutAlign="center center" 
-            fxFlexFill class="grid-item1">C</div>
-        
-
-
-
-
+                <mat-card class="card-3">        
+                    <h1>DESCRIPCION:</h1>
+                    <mat-card-content>
+                        <h4>{{ product.description }}</h4> 
+                    </mat-card-content>
+                </mat-card>
+            </div>
         </div>
 
-        <div fxFlex.gt-sm="40%" fxFlex.lt-md="50%"  
-            class="grid-item">
+        <div *ngIf="product" fxFlex.gt-sm="40%" fxFlex.lt-md="50%" >
 
-            <div class="cuadro3" align="start">
-
-                <h2>product.title</h2>
-                <h3>marca: product.branch</h3>
-                <h3>Cantidad: product.quantity</h3>
-                <h2>product.price</h2>
-
+            <mat-card class="card-3">        
+                <h1>{{ product.name }}</h1>
+                <mat-card-content>
+                    <h3>Marca: {{ product.branch }}</h3> 
+                    <h3>Calificacion: {{ product.stars }} </h3>
+                    <h2>Monto: S/.{{ product.price }}.00 </h2>
+                </mat-card-content>
                 <mat-divider inset></mat-divider>
-
-                <div class="search-part">
+                <mat-card-actions>
                     <mat-form-field appearance="outline">
                         <mat-label>Cantidad</mat-label>
                         <input matInput value="1">
                     </mat-form-field>
 
-                    <button mat-raised-button class="add-button" (click)="openDialog()">AGREGAR AL CARRITO</button>
-  
-                </div>
-            </div>
+                    <button mat-raised-button class="add-button" (click)="openDialog(product)">AGREGAR AL CARRITO</button>
+                </mat-card-actions>
+            </mat-card>
         </div>
     </div>
 </div>

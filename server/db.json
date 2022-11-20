@@ -1,0 +1,58 @@
+{
+    "products":[
+        {
+            "id":1,
+            "name": "Phone XL",
+            "price": 799,
+            "description": "A large phone with one of the best screens",
+            "branch": "Microsoft",
+            "stars": 5,
+            "imageUrl": "string",
+            "categorie": "celular"          
+        },
+
+        {
+            "id":2,
+            "name": "Microsft Windows 10 PRO",
+            "price": 100,
+            "description": "A large phone with one of the best screens",
+            "branch": "Microsoft",
+            "stars": 5,
+            "imageUrl": "string",
+            "categorie": "licencias"          
+        },
+
+        {
+            "id":3,
+            "name": "Phone XL",
+            "price": 799,
+            "description": "A large phone with one of the best screens",
+            "branch": "Microsoft",
+            "stars": 5,
+            "imageUrl": "string",
+            "categorie": "celular"          
+        },
+
+        {
+            "id":4,
+            "name": "Phone XL",
+            "price": 799,
+            "description": "A large phone with one of the best screens",
+            "branch": "Microsoft",
+            "stars": 5,
+            "imageUrl": "string",
+            "categorie": "celular"          
+        },
+
+        {
+            "id":5,
+            "name": "Phone XL",
+            "price": 799,
+            "description": "A large phone with one of the best screens",
+            "branch": "Microsoft",
+            "stars": 5,
+            "imageUrl": "string",
+            "categorie": "celular"          
+        }
+    ]
+}

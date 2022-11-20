@@ -6,21 +6,69 @@
 
 <mat-divider></mat-divider>
 
+<div class="titlePage">
+    <h1>CARRITO COMPRAS</h1>
+    <mat-divider></mat-divider>
+</div>
+
 <div fxLayout="row" class="container" fxLayoutGap="10px">
+    <div fxLayout="column" fxFlex.gt-sm="70%" 
+        fxFlex.lt-md="50%" class="grid-item">
 
+        <div *ngFor="let item of items">
+
+            <mat-card class="home-card">   
+
+                <div fxFlex.gt-sm="40%" fxFlex.lt-md="50%" fxLayoutAlign="center center">
+                    <img mat-card-image
+                        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                        alt="Photo of a Shiba Inu">
+                </div>
+          
+                <div fxLayout="column" fxFlex.gt-sm="60%" fxFlex.lt-md="50%">
+
+                    <h1>{{ item.name }}</h1>
+                    <mat-card-content>
+                        <h3>Marca: {{ item.branch }}</h3> 
+                        <h2>Monto: S/.{{ item.price }}.00 </h2>
+                    </mat-card-content>
+                    <mat-divider inset></mat-divider>
+                    <mat-card-actions>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Cantidad</mat-label>
+                            <input matInput value="1">
+                        </mat-form-field>
     
-        
-        <div fxLayout="column" fxLayoutGap="10px" fxFlex.gt-sm="70%" 
-            fxFlex.lt-md="50%" fxLayoutAlign="center center" class="grid-item">
-
-        </div>
-
-        <div fxFlex.gt-sm="30%" fxFlex.lt-md="50%"  
-            class="grid-item">
-
-            <mat-card>
-
+                        <button mat-raised-button class="add-button">Actualizar</button>
+                        <button mat-raised-button class="add-button">Eliminar</button>
+                    </mat-card-actions>
+                </div>
             </mat-card>
-        </div>
+          </div>
+
+    </div>
+
+    <div fxFlex.gt-sm="30%" fxFlex.lt-md="50%">
+
+        <mat-card class="cardResumen">
+            <mat-card-header>
+                <h1>Resumen de Pedido</h1>
+            </mat-card-header>
+            <mat-divider inset></mat-divider>
+            <mat-card-content>
+                <h2>SubTotal: S/.{{orderPrice}}.00 </h2>
+                <mat-divider inset></mat-divider>
+                <h2><a class="calcEnvio" (click)="openDialogDirection()" >Calcular envio</a></h2>
+                <mat-divider inset></mat-divider>
+                <h2>Envio: S/. {{orderEnvio}}.00</h2>
+                <mat-divider inset></mat-divider>
+                <h1>Total: S/. {{orderTotal}}.00</h1>
+            </mat-card-content>
+            <mat-divider inset></mat-divider>
+            <mat-card-actions class="alignButton">
+                <button mat-raised-button class="add-button" (click)="openDialogPayment()">Procesar Compra</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
    
 </div>

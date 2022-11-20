@@ -1,0 +1,30 @@
+.STbutton {
+    width: 140px;
+    height: 50px;
+    background-color:#385296;
+    color: white;
+    text-align: center;
+}
+
+.label1 {
+    width: 80%;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.label2 {
+    width: 80%;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+
+
+.container{
+    width: 290px;
+}
+
+.box1{
+    width: 80%;
+}

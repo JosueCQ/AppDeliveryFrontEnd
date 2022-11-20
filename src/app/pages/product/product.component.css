@@ -38,7 +38,6 @@ a{
 }
  
 .cuadro3 {
-    text-align:center;
     width: 100%;
     max-width: 600px;
     margin: 20px;
@@ -61,4 +60,15 @@ a{
     background-color:#385296;
     color: white;
     text-align: center;
+}
+
+.card-3{
+    height: full;
+    border-radius: 5px;
+    border: 0.5px solid black;
+    margin-left: 5px;
+    margin-bottom: 30px;
+}
+h1{
+    font-family: Arial, Helvetica, Fantasy;
 }

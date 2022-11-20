@@ -1,0 +1,41 @@
+.grid-item {
+    border-radius: 5px;
+    border: 1px solid black
+}
+
+.STbutton {
+    width: 180px;
+    height: 50px;
+    background-color:#385296;
+    color: white;
+    text-align: center;
+}
+
+.mat-dialog-actions{
+    margin: 10px 0px 0px 10%;
+}
+
+.label1 {
+    width: 70%;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.label2 {
+    width: 90%;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.label3 {
+    width: 30%;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.envioAlign{
+    margin: 10px 10px 10px 10%;
+}

@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>PAGO</h1>
+
+<div fxLayout="column" class="container" fxLayoutAlign="center center">
+    <mat-form-field appearance="outline" class="label1">
+        <mat-label>Nombre Propietario</mat-label>
+        <input matInput value="Josue C.">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="label1">
+        <mat-label>Tarjeta</mat-label>
+        <input matInput value="XXXX XXXX XXXX XXXX">
+    </mat-form-field>
+
+    <div fxLayout="row" class="box1">
+        <div fxLayout="column" fxFlex.gt-sm="50%" fxFlex.lt-md="50%">
+            <mat-form-field appearance="outline" class="label1">
+                <mat-label>Fecha</mat-label>
+                <input matInput value="XX/XXXX">
+            </mat-form-field>
+            
+        </div>
+
+        <div fxLayout="column" fxFlex.gt-sm="50%" fxFlex.lt-md="50%">
+            <mat-form-field appearance="outline" class="label1">
+                <mat-label>CVV</mat-label>
+                <input matInput value="XXX">
+            </mat-form-field>
+            
+        </div>
+
+    </div>
+    <mat-form-field appearance="outline" class="label1">
+        <mat-label>Alias</mat-label>
+        <input matInput value="......">
+        <!--<input matInput [(ngModel)]="data.animal">-->
+    </mat-form-field>
+</div>
+
+<mat-divider></mat-divider>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close [routerLink]="'/paymentDone'" class="STbutton" >PAGAR</button>
+    <button mat-button mat-dialog-close class="STbutton" >CANCELAR</button>
+</div>

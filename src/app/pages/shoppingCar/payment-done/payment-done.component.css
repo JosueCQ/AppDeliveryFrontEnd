@@ -1,0 +1,16 @@
+.STbutton {
+    width: 140px;
+    height: 50px;
+    background-color:#385296;
+    color: white;
+    text-align: center;
+}
+
+.boxLateral{
+    background-color: rgb(100, 99, 99);
+    width: 20px;
+}
+
+.content {
+    height: 90%;
+} 

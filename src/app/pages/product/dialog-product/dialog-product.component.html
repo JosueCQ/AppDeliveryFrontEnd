@@ -17,18 +17,18 @@
           product.image
       </div>
 
-      <div fxLayout="column" fxFlex.gt-sm="60%" fxFlex.lt-md="50%" fxLayoutAlign="center center" class="grid-item">
+      <div fxLayout="column" fxFlex.gt-sm="60%" fxFlex.lt-md="50%" class="grid-item">
 
-          <h2>product.title</h2>
-          <h3>marca: product.branch</h3>
-          <h3>Cantidad: product.quantity</h3>
-          <h2>product.price</h2>
+          <h2>{{data.name }}</h2>
+          <h3>marca:{{ data.branch }}</h3>
+          <h3>Cantidad: 2</h3>
+          <h2>Precio: S/.{{ data.price }}.00</h2>
       </div>
     </div>
   </div>
 </mat-dialog-content>
 <mat-dialog-actions align="center">
-  <button mat-raised-button class="car-button" [routerLink]="'/shoppinCar'">IR A MI CARRITO</button>
+  <button mat-button mat-dialog-close class="car-button" [routerLink]="'/scList'">IR A MI CARRITO</button>
   
-  <button mat-button mat-dialog-close [routerLink]="'/scList'">Seguir comprando</button>
+  <button mat-button mat-dialog-close [routerLink]="'/main'">Seguir comprando</button>
 </mat-dialog-actions>

@@ -3,6 +3,24 @@
   }
   
   .mat-toolbar.mat-primary {
-    background: #00B376;
+    background: gray;
     color: #fff;
   }
+
+  .icon-display {
+    transform: scale(1.5);
+ }
+
+ .app-filter-input{
+   width: 400px;
+   margin-left: 15px;
+ }
+
+ .example-icon{
+   margin-right: 15px;
+ }
+
+ a{
+  color: white;
+  text-decoration: none;
+}

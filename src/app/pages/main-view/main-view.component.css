@@ -1,3 +1,33 @@
 .example-spacer {
     flex: 1 1 auto;
-  }
+}
+
+.example-card {
+    width: 170px;
+    height: 320px;
+}
+
+.content {
+  padding: 16px;
+}
+
+.seeButton {
+  width: 170px;
+  height: 30px;
+  background-color:#385296;
+  color: white;
+  text-align: center;
+}
+
+.box1{
+  background-color: blue;
+}
+
+.boxLateral{
+  background-color: rgb(100, 99, 99);
+  width: 20px;
+}
+
+.box3{
+  background-color: green;
+}

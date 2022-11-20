@@ -15,11 +15,51 @@ a{
 .container {
       padding: 5px;
 }
-    
+
 .grid-item {
-      background-color: lightsalmon;
       border-radius: 5px;
-      padding: 10px;
       height: 450px;
-      border: 1px solid black
 }
+
+.titlePage{
+      margin: 10px 20px 0px 20px;
+}
+
+.home-card{
+      margin: 0px 0px 5px 0px;
+      border: 0.3px solid black
+}
+.mat-card-image{
+      margin: 15px 20px 0px 10px;
+}
+
+.add-button {
+      width: 180px;
+      height: 50px;
+      background-color:#385296;
+      color: white;
+      text-align: center;
+}
+
+.mat-form-field {
+      width: 20%;
+      padding-left: 10px;
+      padding-right: 10px;
+}
+
+ .alignButton{
+      margin: 10px 0px 0px 25%;
+ } 
+
+ h2{
+      opacity: 0.5;
+ }
+
+ .cardResumen{
+      border-radius: 5px;
+      border: 1px solid black
+ }
+
+ .calcEnvio{
+       color: blue;
+ }

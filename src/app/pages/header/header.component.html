@@ -1,15 +1,39 @@
 <div>
   <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>TEC</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" [routerLink]="'/scList'">
-      <mat-icon>shoppingcart</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" [routerLink]="'/login'">
-      <mat-icon>person</mat-icon>
-    </button>
+
+    <div>
+      <button mat-icon-button class="example-icon" (click)="onToggleSidenav()"
+              aria-label="Example icon-button with menu icon">
+          <mat-icon class="icon-display">menu</mat-icon>
+      </button>
+    </div>
+    <div >
+        <a routerLink="/main">TEC</a>
+    </div>
+
+    <div>
+      <!--Search-->
+     <mat-form-field class="app-filter-input" floatPlaceholder="never" fxFlex>
+        <mat-icon class="app-filter-input-icon" matPrefix>search</mat-icon>
+        <input matInput #filter placeholder="Search&hellip;">
+      </mat-form-field> 
+    </div>
+     
+
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" [routerLink]="'/scList'">
+        <mat-icon class="icon-display">shopping_cart</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" [routerLink]="'/login'">
+        <mat-icon class="icon-display">person</mat-icon>
+      </button>
+  </div>
+
+
+    
+   
+    
+
+    
   </mat-toolbar>
 </div>
