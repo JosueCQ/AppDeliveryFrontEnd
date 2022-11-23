@@ -38,6 +38,6 @@
 
 <mat-divider></mat-divider>
 <div mat-dialog-actions>
-    <button mat-button mat-dialog-close [routerLink]="'/paymentDone'" class="STbutton" >PAGAR</button>
+    <button mat-button mat-dialog-close (click)="CreateOrder()" [routerLink]="'/paymentDone'" class="STbutton" >PAGAR</button>
     <button mat-button mat-dialog-close class="STbutton" >CANCELAR</button>
 </div>

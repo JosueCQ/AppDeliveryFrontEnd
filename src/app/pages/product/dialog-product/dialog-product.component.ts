@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Product, products } from 'src/app/models/Product';
+import { ProductService } from 'src/app/services/product/product.service';
 
 @Component({
   selector: 'app-dialog-product',
@@ -9,10 +10,14 @@ import { Product, products } from 'src/app/models/Product';
 })
 export class DialogProductComponent implements OnInit {
 
-  //product: Product | undefined;
+  product: Product | undefined;
+  productID: number | undefined;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { 
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,
+              private _productService: ProductService) { 
     //this.product = data.dataProduct;
+    this.productID = data.idProduct;
+    this._productService.getProductByID(this.data.idProduct).subscribe(dataP =>(this.product=dataP))
   }
 
   ngOnInit(): void {

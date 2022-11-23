@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { OrderProducts } from 'src/app/models/OrderProducts';
 import { ShoppingCartService } from 'src/app/services/shoppingCart/shopping-cart.service';
 import { DialogDirectionComponent } from '../dialog-direction/dialog-direction.component';
 import { DialogPaymentComponent } from '../dialog-payment/dialog-payment.component';
@@ -15,6 +16,8 @@ export class ScListComponent implements OnInit {
   orderPrice: number = 0;
   orderEnvio: number = 0;
   orderTotal: number = 0;
+  listProducts: OrderProducts[] = [];
+  productOrder: OrderProducts = new OrderProducts();
 
   constructor(private cartService: ShoppingCartService,
               public dialog: MatDialog) { }
@@ -23,6 +26,8 @@ export class ScListComponent implements OnInit {
 
     for(var index in this.items){
       this.orderPrice = this.orderPrice + this.items[index].price;
+      //this.productOrder.productID = this.items[index].id;
+      //this.listProducts.push(this.productOrder);
     }
 
     this.orderTotal = this.orderPrice + this.orderEnvio;
@@ -46,6 +51,7 @@ export class ScListComponent implements OnInit {
         precio: this.orderPrice,
         envio: this.orderEnvio,
         total: this.orderTotal,
+        lista: this.items,
       },
     });
   }

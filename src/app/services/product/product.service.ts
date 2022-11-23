@@ -19,13 +19,20 @@ export class ProductService {
   
   constructor(private http:HttpClient) { }
 
-  getAll(): Observable<Product> {
+  getAll(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.basePath, this.httpOptions);
+  }
+
+  getProductByID(id: number): Observable<Product> {
+    return this.http.get<Product>(`${this.basePath}/${id}`);
+  }
+
+  /*getAll(): Observable<Product> {
     return this.http.get<Product>(this.basePath, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError));
-  }
-
+  }*/
   create(item: any): Observable<Product> {
     return this.http.post<Product>(this.basePath, JSON.stringify(item), this.httpOptions)
       .pipe(

@@ -1,12 +1,20 @@
-export class Product {
+export interface Product {
 
-    id: number = 0;
+    id: number;
+    name: string;
+    description: string;
+    branch:string;
+    stars: number;
+    imageUrl: string;
+    price: number;
+
+    /*id: number = 0;
     name: string ='';
     description: string ='';
     branch:string ='';
     stars: number = 0;
     imageUrl: string ='';
-    price: number = 0;
+    price: number = 0;*/
 }
 
 export const products = [

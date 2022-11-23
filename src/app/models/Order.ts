@@ -1,3 +1,5 @@
+import { OrderProducts } from "./OrderProducts";
+
 export class Order {
 
     id: number = 0;
@@ -9,4 +11,5 @@ export class Order {
     creditCardID: number = 0;
     productID: number[] = [];
     quantity: number[] = [];
+    products: OrderProducts[] = []
 }

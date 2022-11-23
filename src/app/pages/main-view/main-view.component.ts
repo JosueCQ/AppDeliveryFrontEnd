@@ -15,13 +15,14 @@ export class MainViewComponent implements OnInit {
 
   products = products;
   proD!: Observable<Product[]>;
-  prdddd:Product | undefined;
+  prdddd:Product[] | undefined;
   
-  constructor() {
+  constructor(private _productService: ProductService) {
    }
 
   ngOnInit(): void {
 
+    this._productService.getAll().subscribe(data => (this.prdddd = data));
     //console.log(this._productService.getAll());
     
     //this.getAllSolesBonos()
