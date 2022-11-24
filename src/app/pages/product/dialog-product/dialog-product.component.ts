@@ -10,17 +10,20 @@ import { ProductService } from 'src/app/services/product/product.service';
 })
 export class DialogProductComponent implements OnInit {
 
-  product: Product | undefined;
+  productStorage: Product = new Product();
   productID: number | undefined;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any,
-              private _productService: ProductService) { 
-    //this.product = data.dataProduct;
-    this.productID = data.idProduct;
-    this._productService.getProductByID(this.data.idProduct).subscribe(dataP =>(this.product=dataP))
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any
+              ) { 
+    this.productStorage = this.data.product;
+    //console.log(this.product?.id)
+    //this.productID = data.idProduct;
+    //console.log(this.data.name);
+    //this._productService.getProductByID(this.data.idProduct).subscribe(dataP =>(this.product=dataP))
   }
 
   ngOnInit(): void {
+    console.log(this.data)
   }
 
 }

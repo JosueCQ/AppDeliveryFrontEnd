@@ -9,7 +9,9 @@ import { Product } from 'src/app/models/Product';
   providedIn: 'root'
 })
 export class ProductService {
-  basePath = 'http://localhost:3000/products'
+
+  basePath = 'https://delivery-tdp-api.herokuapp.com/api/products'
+  //basePath = 'http://localhost:3000/products'
 
   httpOptions = {
     headers: new HttpHeaders( {
@@ -25,6 +27,14 @@ export class ProductService {
 
   getProductByID(id: number): Observable<Product> {
     return this.http.get<Product>(`${this.basePath}/${id}`);
+  }
+
+  getProductByCode(CodeProduct: string): Observable<Product> {
+    return this.http.get<Product>(`${this.basePath}/${CodeProduct}`);
+  }
+
+  postProduct(product:Product){
+    return this.http.post(this.basePath, product);
   }
 
   /*getAll(): Observable<Product> {

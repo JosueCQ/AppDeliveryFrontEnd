@@ -4,7 +4,7 @@
 
 .example-card {
     width: 170px;
-    height: 320px;
+    height: 330px;
 }
 
 .content {
@@ -30,4 +30,8 @@
 
 .box3{
   background-color: green;
+}
+
+.mat-card-image{
+  height: 180px;
 }

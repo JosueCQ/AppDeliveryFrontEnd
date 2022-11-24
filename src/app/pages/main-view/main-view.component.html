@@ -8,7 +8,7 @@
 
         <div fxFlex="25%" *ngFor="let product of prdddd">
             <mat-card class="example-card">
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                <img mat-card-image src="{{product.imageUrl}}" alt="imgURL">
         
                 <mat-card-header>
                     <mat-card-title>
@@ -30,7 +30,7 @@
         
                 <mat-divider inset></mat-divider>
                 <mat-card-actions>
-                    <button class="seeButton" mat-button [routerLink]="['/product', product.id]">VER</button>
+                    <button class="seeButton" mat-button [routerLink]="['/product', product.productCode]">VER</button>
                 </mat-card-actions>
             </mat-card>
         </div>

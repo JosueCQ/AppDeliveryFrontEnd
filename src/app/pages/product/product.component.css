@@ -72,3 +72,8 @@ a{
 h1{
     font-family: Arial, Helvetica, Fantasy;
 }
+
+.mat-card-image{
+    height: 50%;
+    width: 50%;
+}

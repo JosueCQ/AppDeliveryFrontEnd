@@ -9,7 +9,8 @@ import { Order } from 'src/app/models/Order';
   providedIn: 'root'
 })
 export class OrderService {
-  basePath = 'http://localhost:3000/orders'
+  basePath = 'https://delivery-tdp-api.herokuapp.com/api/orders'
+  //basePath = 'http://localhost:3000/orders'
 
   httpOptions = {
     headers: new HttpHeaders( {
@@ -18,12 +19,24 @@ export class OrderService {
   }
   constructor(private http:HttpClient) { }
 
-  getAll(): Observable<Order> {
+  getAll(): Observable<Order[]> {
+    return this.http.get<Order[]>(this.basePath, this.httpOptions);
+  }
+
+  getOrderByID(id: number): Observable<Order> {
+    return this.http.get<Order>(`${this.basePath}/${id}`);
+  }
+
+  postOrder(order:Order){
+    return this.http.post(this.basePath, order);
+  }
+
+  /*getAll(): Observable<Order> {
     return this.http.get<Order>(this.basePath, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError));
-  }
+  }*/
 
   create(item: any): Observable<Order> {
     return this.http.post<Order>(this.basePath, JSON.stringify(item), this.httpOptions)

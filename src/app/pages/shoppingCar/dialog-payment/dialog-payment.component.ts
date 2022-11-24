@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Order } from 'src/app/models/Order';
 import { OrderProducts } from 'src/app/models/OrderProducts';
+import { Product } from 'src/app/models/Product';
 import { OrderService } from 'src/app/services/order/order.service';
 import { ShoppingCartService } from 'src/app/services/shoppingCart/shopping-cart.service';
 
@@ -13,7 +14,7 @@ import { ShoppingCartService } from 'src/app/services/shoppingCart/shopping-cart
 export class DialogPaymentComponent implements OnInit {
 
   orderObj: Order = new Order();
-  listProducts: OrderProducts[] = [];
+  listProducts: Product[] = [];
   productOrder: OrderProducts = new OrderProducts();
   items = this.cartService.getItems();
 
@@ -25,29 +26,15 @@ export class DialogPaymentComponent implements OnInit {
   }
 
   CreateOrder(){
-    //this.productOrder.productID=1;
-    //this.productOrder.quantity=2;
-    //this.listProducts.push(this.productOrder);
 
-    for(var index in this.items){
-      this.productOrder.productID = this.items[1].id;
-      this.productOrder.quantity =1;
-      this.listProducts.push(this.productOrder);
-    }
-
-    this.orderObj.price = this.data.precio;
-    this.orderObj.envio = this.data.envio;
-    this.orderObj.total = this.data.total;
-    this.orderObj.status = "Pendiente";
+    this.listProducts = this.cartService.getItems();
+    this.orderObj.invoce = this.data.total;
     this.orderObj.products = this.listProducts;
 
-    this._orderService.create(this.orderObj).subscribe(response =>{
+    this._orderService.postOrder(this.orderObj).subscribe(response =>{
       console.log(response);
-      //alert('Bono created Successfully')
       let ref = document.getElementById('cancel')
       ref?.click();
-      //this.formValue.reset();
-      //this.getAllSolesBonos();
     },
     err=> {
       alert('Something Went Wrong');

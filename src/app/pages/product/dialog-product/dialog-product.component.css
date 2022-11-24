@@ -9,3 +9,8 @@
     color: white;
     text-align: center;
 }
+
+.mat-card-image{
+    height: 80%;
+    width: 80%;
+}

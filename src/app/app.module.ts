@@ -38,6 +38,7 @@ import { ScListComponent } from './pages/shoppingCar/sc-list/sc-list.component';
 import { DialogDirectionComponent } from './pages/shoppingCar/dialog-direction/dialog-direction.component';
 import { DialogPaymentComponent } from './pages/shoppingCar/dialog-payment/dialog-payment.component';
 import { PaymentDoneComponent } from './pages/shoppingCar/payment-done/payment-done.component';
+import { AddProductComponent } from './pages/product/add-product/add-product.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { PaymentDoneComponent } from './pages/shoppingCar/payment-done/payment-d
     DialogDirectionComponent,
     DialogPaymentComponent,
     PaymentDoneComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,

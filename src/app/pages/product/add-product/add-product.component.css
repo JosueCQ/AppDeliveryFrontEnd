@@ -1,0 +1,33 @@
+.mat-parent {
+    background-color:white;
+    margin-top: 2%;
+    width: 50%;
+  }
+
+.form1 {
+    width: 500px;
+    padding: 5px;
+}
+
+.form2 {
+    width: 50px;
+    padding: 5px;
+}
+
+.form3 {
+    width: 200px;
+    padding: 5px;
+}
+
+.form4 {
+    width: 600px;
+    padding: 5px;
+}
+
+.ST-button {
+    width: 250px;
+    height: 50px;
+    background-color:#385296;
+    color: white;
+    text-align: center;
+}

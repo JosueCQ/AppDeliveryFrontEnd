@@ -14,15 +14,15 @@
     <div fxLayout.gt-sm="row" fxLayout.lt-md="column" fxLayoutGap="10px">
         
       <div fxFlex.gt-sm="40%" fxFlex.lt-md="50%" fxLayoutAlign="center center" class="grid-item">
-          product.image
+        <img mat-card-image src="{{productStorage.imageUrl}}" alt="iphone 13">
       </div>
 
       <div fxLayout="column" fxFlex.gt-sm="60%" fxFlex.lt-md="50%" class="grid-item">
 
-          <h2>{{data.name }}</h2>
-          <h3>marca:{{ data.branch }}</h3>
+          <h2>{{productStorage.name}}</h2>
+          <h3>marca:{{ productStorage.branch }}</h3>
           <h3>Cantidad: 2</h3>
-          <h2>Precio: S/.{{ data.price }}.00</h2>
+          <h2>Precio: S/.{{ productStorage.price }}.00</h2>
       </div>
     </div>
   </div>

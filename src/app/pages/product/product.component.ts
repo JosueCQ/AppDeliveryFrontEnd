@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { DialogProductComponent } from './dialog-product/dialog-product.component';
 import { ActivatedRoute } from '@angular/router';
@@ -15,12 +15,13 @@ import { Observable } from 'rxjs';
 })
 export class ProductComponent implements OnInit {
 
-  product: Product | undefined;
+  product: Product = new Product();
   nameProduct: string | undefined;
-  branchProduct: String | undefined;
+  branchProduct: String = "";
   priceProduct: Number | undefined;
-  prdddd:Product[] | undefined;
-  productId: Number | undefined
+  prdddd:Product[]= [];
+  productId: Number = 0;
+  productCode: String ="";
 
   constructor(public dialog: MatDialog,
               private route: ActivatedRoute,
@@ -29,28 +30,24 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
     
-    this._productService.getAll().subscribe(data => (this.prdddd = data));
     const routeParams = this.route.snapshot.paramMap;
-    const productIdFromRoute = Number(routeParams.get('productId'));
-    this.productId = productIdFromRoute;
-  
-    // Find the product that correspond with the id provided in route.
-    //this.product = products.find(product => product.id === productIdFromRoute);
+    console.log(routeParams);
+    const productIdFromRoute = String(routeParams.get('id'));
+
+    console.log(productIdFromRoute);
     
-    this._productService.getProductByID(productIdFromRoute).subscribe(data => (this.product=data))
-    this.nameProduct = this.product?.name;
-    this.branchProduct = this.product?.branch;
-    this.priceProduct = this.product?.price;
+    this._productService.getProductByCode(productIdFromRoute).subscribe(data => (this.product=data))
   }
 
   openDialog(product: Product) {
+
     this.cartService.addToCart(product);
     this.dialog.open(DialogProductComponent, {
       data: {
-          name: this.nameProduct,
-          branch: this.branchProduct,
-          price: this.priceProduct,
-          idProduct: this.productId,
+          //name: this.nameProduct,
+          //branch: this.branchProduct,
+          //price: this.priceProduct,
+          product: this.product,
       }
     });
   }

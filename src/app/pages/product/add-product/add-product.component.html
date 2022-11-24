@@ -1,0 +1,76 @@
+<mat-card class="mat-parent">
+
+    <mat-card-title>AÑADIR PRODUCTO</mat-card-title>
+  
+    <mat-card-content>
+
+        <div>
+            <mat-form-field class="form1">
+                <mat-label>Name</mat-label>
+                <input matInput type="text" [(ngModel)]="name">
+                <button *ngIf="name" matSuffix mat-icon-button aria-label="Clear" (click)="name=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+    
+            <mat-form-field class="form3">
+                <mat-label>Branch</mat-label>
+                <input matInput type="text" [(ngModel)]="branch">
+                <button *ngIf="branch" matSuffix mat-icon-button aria-label="Clear" (click)="branch=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+    
+            <mat-form-field class="form2">
+                <mat-label>Stars</mat-label>
+                <input matInput type="number" [(ngModel)]="stars">
+                
+            </mat-form-field>
+
+        </div>
+        
+        <div>
+            <mat-form-field class="form3">
+                <mat-label>Precio (S/.)</mat-label>
+                <input matInput type="number" [(ngModel)]="price">
+                
+            </mat-form-field>
+    
+            <mat-form-field class="form3">
+                <mat-label>Codigo</mat-label>
+                <input matInput type="number" [(ngModel)]="codeProduct">
+                
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field class="form4">
+                <mat-label>Descripcion</mat-label>
+                <input matInput type="text" [(ngModel)]="descripcionProduct">
+                <button *ngIf="descripcionProduct" matSuffix mat-icon-button aria-label="Clear" (click)="descripcionProduct=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field class="form4">
+                <mat-label>Img URL</mat-label>
+                <input matInput type="text" [(ngModel)]="imgURL">
+                <button *ngIf="imgURL" matSuffix mat-icon-button aria-label="Clear" (click)="imgURL=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        
+  
+    </mat-card-content>
+
+    <mat-divider inset></mat-divider>
+
+    <mat-card-actions align="start">
+      <button mat-raised-button class="ST-button"
+              (click)="CreateProduct()">Guardar</button>
+    </mat-card-actions>
+  
+  </mat-card>
